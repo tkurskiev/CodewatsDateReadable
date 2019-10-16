@@ -17,7 +17,7 @@ namespace CodewatsDateReadable
             {
                 try
                 {
-                    Console.WriteLine("Please enter duration:");
+                    Console.WriteLine("\nPlease enter duration:");
                     var seconds = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
                     Console.WriteLine($"The full date string:{Environment.NewLine}{HumanTimeFormat.FormatDuration(seconds)}");
                 }

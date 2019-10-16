@@ -15,9 +15,10 @@ namespace CodeWarsDateReadable.DateClasses
             _dateComponents = new List<IDateComponent>();
         }
 
+        /// <exception cref="T:System.OverflowException"><paramref name="value" /> equals <see cref="F:System.Int32.MinValue" />.</exception>
         public void AddDateComponent(IDateComponent dateComponent)
         {
-            if(dateComponent != null)
+            if(dateComponent != null && !string.IsNullOrWhiteSpace(dateComponent.GetDateString()))
                 _dateComponents.Add(dateComponent);
         }
 
@@ -35,10 +36,10 @@ namespace CodeWarsDateReadable.DateClasses
 
                 resultString += dateComponentString;
 
-                if (componentsCount > i + 2 && !string.IsNullOrWhiteSpace(dateComponentString))
+                if (componentsCount > i + 2)
                     resultString += Separator;
 
-                else if (componentsCount == i + 2 && !string.IsNullOrWhiteSpace(dateComponentString))
+                else if (componentsCount == i + 2)
                     resultString += LastSeparator;
             }
 
