@@ -1,5 +1,4 @@
-﻿using System;
-using CodeWarsDateReadable.Interfaces;
+﻿using CodeWarsDateReadable.Interfaces;
 
 namespace CodeWarsDateReadable.DateClasses
 {
